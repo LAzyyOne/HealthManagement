@@ -1,0 +1,35 @@
+<button type="button" class="btn btn-outline-success" routerLink="/add-test">Add test</button>
+<h1>Test list</h1>
+<div class="list" >
+    <div class="container">
+                    
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-success">
+              <th>Id</th>
+              <th>Test Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let list of list1">
+            <tr class="table-success">
+              <td>{{list.id}}</td>
+              <td>{{list.testName}}</td>
+              <td><i class="fa fa-trash-o" (click)="deleteTest(list.id)"style="font-size:24px;color:red"></i></td>
+              
+            </tr>
+            
+            
+          </tbody>
+        </table>
+
+      </div>
+   <!-- <ul>
+    <li>{{list.id}}</li>
+    <li>{{list.testName}} <i class="fa fa-trash-o" (click)="deletTest(list.testName)"style="font-size:24px;color:red"></i></li>
+    
+   </ul> -->
+   
+    
+</div>
+

@@ -1,0 +1,24 @@
+<button type="button" class="btn btn-outline-success" routerLink="/list-test">Test List</button>
+      
+      
+ <h1>Enter Test here!</h1>
+ <div  *ngIf="alert"class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Success!</strong> Your test is successfully submit .
+  </div>
+    <form [formGroup]="addTest" (ngSubmit)="collectTest()">
+        <div class="form-group">
+          <label for="exampleInputEmail1"></label>
+          <input type="text" class="form-control"  placeholder="Enter Test" formControlName ="testName" >
+          <br>
+          <select class="form-control">
+            <option>Small select</option>
+          </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Add</button>
+        
+           
+      </form>
+      
+      
